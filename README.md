@@ -3,5 +3,5 @@ Eventku adalah sebuah website manajemen event berbasis AI yang dapat menampilkan
 
 - Ketua Kelompok: Daffa Bil Nadzary
 - Anggota 1:
-- Anggota 2:
+- Anggota 2: Arina Putri Tanca - 19/446768/49873
 - Anggota 3:
