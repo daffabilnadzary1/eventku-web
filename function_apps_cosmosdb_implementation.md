@@ -7,7 +7,7 @@ setiap anggota adalah owner agar memiliki full akses. Di dalam resource grup ter
 Function Apps dan Azure CosmosDB yang nantinya akan Function Apps dan CosmosDB yang telah dibuat 
 akan diintegrasikan.
 
-### _Screenshots_ Langkah Penmbuatan _Resource Group_ pada Layanan Azure
+### _Screenshots_ Langkah Pembuatan _Resource Group_ pada Layanan Azure
 
 <img src = "https://user-images.githubusercontent.com/60891512/159707858-21e91967-b69d-417a-bb1e-eb3eb8facf92.png" width = 500>
 <img src = "https://user-images.githubusercontent.com/60891512/159708471-aec67310-f248-4581-9134-318a04d7153e.png" width = 500>
@@ -32,3 +32,14 @@ akan diintegrasikan.
 <img src = "https://user-images.githubusercontent.com/60891512/159714454-12a80d1f-93f8-4951-bf4b-0f9d6f023a41.png" width = 500>
 <img src = "https://user-images.githubusercontent.com/60891512/159714557-7d665bdc-fc6a-43a4-b869-252b7c732528.png" width = 500>
 <img src = "https://user-images.githubusercontent.com/60891512/159714795-1c465e5f-ceca-47fc-a4a3-a0c1506bda24.png" width = 500>
+
+### _Screenshot_ Langkah Pengerjaan Integrasi Function dan CosmosDB
+
+<img src = "https://user-images.githubusercontent.com/60891512/159722812-3bd0c501-c442-42f0-96e4-3d30af89dd12.png" width = 500>
+<img src = "https://user-images.githubusercontent.com/60891512/159723096-4d55ecb0-bc3a-4333-806b-0d2a0570f5a4.png" width = 500>
+<img src = "https://user-images.githubusercontent.com/60891512/159723336-526355d4-bd51-4a2a-b0e0-f7c1ca7a8c2c.png" width = 500>
+<img src = "https://user-images.githubusercontent.com/60891512/159723461-4924ac62-2e1c-4b89-a36e-07766096f5e3.png" width = 500>
+<img src = "https://user-images.githubusercontent.com/60891512/159723586-854cc1c7-76b9-4ab6-9e94-2313770ddbb2.png" width = 500>
+<img src = "https://user-images.githubusercontent.com/60891512/159723853-21104369-3a29-4a34-96d4-3c1c115ff893.png" width = 500>
+<img src = "https://user-images.githubusercontent.com/60891512/159724211-6bd8d780-eb2c-46ff-a18e-533ac570013c.png" width = 500>
+<img src = "https://user-images.githubusercontent.com/60891512/159724437-76bca884-a58b-4cb9-b2d5-44109cc30726.png" width = 500>
