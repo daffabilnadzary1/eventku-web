@@ -14,6 +14,7 @@
               },
               aspectRatio: {
                 '4/3': '4 / 3',
+                '7/6': '7 / 6',
               },
             }
           }
@@ -26,7 +27,7 @@
 {% include 'partials/navbar.html' %}
 <div class="mt-[20px] relative">
   <h1 class="text-[20px] font-inter font-bold ml-[40px] text-[#393939]">Popular Today</h1>
-  <div class="h-auto flex justify-center">
+  <div class="h-auto justify-center">
     <div class = "flex w-full h-[300px] mt-[20px] overflow-clip overflow-x-scroll">
   
       <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]"
@@ -57,12 +58,15 @@
   </div>
 </section>
 
-<section class="flex w-auto h-[480px] py-[20px] px-[40px] overflow-x-auto">
-  <div class="h-[310px] w-auto container justify-center bg-[#F4F4F4] rounded-[20px] overflow-hidden">
+{% comment %} <section class="h-auto justify-center py-[20px] px-[40px] bg-blue-200">
+  
+</section> {% endcomment %}
+{% comment %} <div class = "grid-cols-3 justify-center w-full h-[310px] mt-[20px] overflow-clip overflow-x-scroll">
+  <div class="mx-[10px] h-[310px] w-[360px] container justify-center bg-[#F4F4F4] rounded-[20px] overflow-hidden">
     <div class = "h-[240px] bg-blue-700 rounded-[20px]"
       style="background-image: url('{% static 'Poster1.png' %}');">
     </div>
-    <div class="flex w-full bg-[#F4F4F4] h-auto p-[10px] justify-between items-center">
+    <div class="relative flex w-full bg-[#F4F4F4] h-auto p-[10px] justify-between items-center">
       <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
         ROSSA 25 SHINING CONCERT</h1>
       <button class="h-auto w-auto ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
@@ -70,4 +74,26 @@
       </button>
     </div>
   </div>
+</div> {% endcomment %}
+
+<div class="relative h-[400px] pl-[20px]">
+  <div class="flex w-full h-[360px] pb-[10px] overflow-clip overflow-x-scroll">
+    <div class="h-[320px] rounded-[20px] overflow-hidden aspect-7/6
+    drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
+      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
+        style="background-image: url('{% static 'Poster1.png' %}');">
+      </div>
+      <div class="relative flex w-full bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
+        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
+          ROSSA 25 SHINING CONCERT</h1>
+        <button class="h-auto w-auto ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
+        </button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+ 
+
 {% endblock content %} 
