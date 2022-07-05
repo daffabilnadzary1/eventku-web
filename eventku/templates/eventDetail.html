@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Detail Page
+{% endblock title %}
+    {% block others %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                inter: ['Inter']
+              },
+              aspectRatio: {
+                '4/3': '4 / 3',
+                '7/6': '7 / 6',
+                '2/1': '2 / 1'
+              },
+            }
+          }
+        }
+      </script>
+    {% endblock others %}
+{% block content %}
+{% include 'partials/navbar.html' %}
+<div class="w-auto h-[400px] mx-[50px] mt-[20px] relative bg-[#F4F4F4] rounded-[20px]">
+    <div class="flex w-full h-full">
+        <img src="{% static 'Poster1.png' %}" class="object-cover aspect-2/1 h-full rounded-[20px]" alt="">
+        <div class="py-[40px] px-[30px] bg-[#F4F4F4] rounded-[20px]">
+            <h1 class="h-[120px] font-inter font-bold text-[24px] leading-tight text-slate-800 overflow-y-auto">
+                ROSSA 25 SHINING YEARS CONCERT ROSSA 25 SHINING
+            </h1>
+            <div class = "flex mt-[10px] w-full h-auto items-center">
+                <img src="{% static 'icon_location.png' %}" alt="" class="h-[25px] aspect-square mr-[10px]">
+                <h1 class="font-inter text-[14px] font-medium w-full">Dyandra Convention Center Surabaya Dyandra Convention Center Surabaya</h1>
+            </div>
+            <div class = "flex mt-[10px] w-full h-auto items-center">
+                <img src="{% static 'icon_calendar.png' %}" alt="" class="h-[25px] aspect-square mr-[10px]">
+                <div class="w-full h-auto">
+                    <h1 class="font-inter text-[14px] font-medium w-full">Sabtu, 25 Juni 2022</h1>
+                    <h1 class="font-inter text-[14px] font-medium w-full">Pukul 17.00</h1>
+                </div>
+            </div>
+            <div class="relative w-full h-auto mt-[10px]">
+                <input
+                    type="search"
+
+                    class="block w-full text-base font-normal py-[10px] pl-[10px]
+                    text-[#797979] bg-white bg-clip-padding border border-solid
+                    border-[#A1A2A9] rounded-[10px] placeholder:text-[15px] placeholder:font-inter
+                    placeholder:font-medium transition ease-in-out m-0 placeholder:text-[#797979]
+                    focus:text-gray-700 focus:bg-white focus:border-[#003CFF]
+                    focus:outline-none"
+
+                    id="exampleSearch"
+                    placeholder="Insert your email here"
+                />
+                <div class="flex mt-[10px] justify-center">
+                    <button class = "bg-[#003CFF] h-auto text-[16px] text-white py-1 px-[20px] font-inter rounded-full">
+                        Get Ticket
+                    </button>
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
