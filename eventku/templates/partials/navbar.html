@@ -1,0 +1,42 @@
+{% load static %}
+
+<nav class = "flex justify-between items-center w-full py-3 h-[60px] bg-transparent border-b-[1px] border-[#A1A2A9]">
+    <div class = "flex ml-10 my-3]">
+        <a href="#">
+        <h1 class = "font-inter font-bold text-slate-900 text-base mr-10 align-text-bottom">Home</h1>
+        </a>
+        <a href="#">
+        <h1 class = "font-inter text-base text-slate-900 mr-10 align-text-bottom">Feature</h1>
+        </a>
+        <a href="#">
+        <h1 class = "font-inter text-base text-slate-900 mr-10 align-text-bottom">FAQ</h1>
+        </a>
+        <a href="#">
+        <h1 class = "font-inter text-base text-slate-900 align-text-bottom">About Us</h1>
+        </a>
+    </div>
+
+    <div class = "flex mr-10 my-auto">
+        <div class="mx-3">
+        <input
+            type="search"
+
+            class=" block w-[280px] pl-[20px] py-1.5 text-base font-normal
+            text-gray-700 bg-transparent bg-clip-padding border border-solid
+            border-[#A1A2A9] rounded-full placeholder:text-[15px] placeholder:font-inter
+            transition ease-in-out m-0 placeholder:text-[#A1A2A9]
+            focus:text-gray-700 focus:bg-white focus:border-[#003CFF]
+            focus:outline-none"
+
+            id="exampleSearch"
+            placeholder="Search"
+        />
+        </div>
+        <button class = "bg-[#003CFF] text-[14px] text-white py-1 px-5 mx-3 font-inter rounded-full">
+        Sign Up
+        </button>
+        <button class = "bg-[#003CFF] text-[14px] text-white py-1 px-5 font-inter rounded-full">
+        Log In
+        </button>
+    </div>
+</nav>

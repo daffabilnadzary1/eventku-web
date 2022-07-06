@@ -1,0 +1,54 @@
+<div class="mt-32 relative">
+    <h1 class="text-5xl font-extrabold tracking-light text-center">Get Away This Winter!</h1>
+    <ul class="mt-10 pb-8 px-[50vw] w-full flex overflow-x-auto gap-8 snap-x">
+      <li class="snap-center">
+        <div class="relative flex-shrink-0 max-w-[95vw] overflow-hidden rounded-3xl">
+          <img src="{% static 'Poster1.png' %}" alt="" class = "absolute inset-0 w-full h-full object-cover object-bottom"/>
+          <div class="absolute inset-0 h-full w-full bg-gradient-to-br from-black/75"></div>
+          <div class="relative h-96 w-[768px] p-12 flex flex-col justify-between items-start">
+            <div>
+              <p class="font-medium text-white">Destinations</p>
+              <h2 class="mt-3 w-2/3 text-3xl font-semibold tracking-light text-white">
+                Title
+              </h2>
+            </div>
+            <a href="#" class="px-4 py-3 rounded-lg bg-white text-slate-900 text-sm font-medium">
+              Browse Destinations
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+{% comment %} <header class="h-auto flex justify-center">
+  <div class = "flex w-full h-[300px] mt-[80px] overflow-clip overflow-x-scroll">
+
+    <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]"
+    style="background-image: url('{% static 'Poster1.png' %}');">
+    </a>
+
+    <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]"
+    style="background-image: url('{% static 'Poster1.png' %}');">
+    </a>
+
+    <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]"
+    style="background-image: url('{% static 'Poster1.png' %}');">
+    </a>
+
+  </div>
+</header> {% endcomment %}
+
+<section class="flex w-auto h-[480px] py-[20px] px-[40px] overflow-x-auto bg-blue-200">
+  <div class="h-[310px] w-[360px] container justify-center bg-[#F4F4F4] rounded-[20px] overflow-hidden">
+    <div class = "h-[240px] bg-blue-700 rounded-[20px]"
+      style="background-image: url('{% static 'Poster1.png' %}');">
+    </div>
+    <div class="flex w-full bg-[#F4F4F4] h-auto p-[10px] justify-between items-center">
+      <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
+        ROSSA 25 SHINING CONCERT</h1>
+      <button class="h-auto w-auto ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+        <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
+      </button>
+    </div>
+  </div>
+</section>

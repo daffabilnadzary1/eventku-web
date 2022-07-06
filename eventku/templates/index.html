@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock title %}
+    {% block others %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                inter: ['Inter']
+              },
+              aspectRatio: {
+                '4/3': '4 / 3',
+                '7/6': '7 / 6',
+              },
+            }
+          }
+        }
+      </script>
+    {% endblock others %}
+    
+{% block content %}
+
+{% include 'partials/navbar.html' %}
+<div class="mt-[20px] relative">
+  <h1 class="text-[20px] font-inter font-bold ml-[40px] text-[#393939]">Popular Today</h1>
+  <div class="h-auto justify-center">
+    <div class = "flex w-full h-[300px] mt-[20px] overflow-clip overflow-x-scroll">
+  
+      <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]"
+      style="background-image: url('{% static 'Poster1.png' %}');">
+      </a>
+  
+      <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]"
+      style="background-image: url('{% static 'Poster1.png' %}');">
+      </a>
+  
+      <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]"
+      style="background-image: url('{% static 'Poster1.png' %}');">
+      </a>
+  
+    </div>
+  </div>
+</div>
+
+<section class = "flex w-full h-auto mt-[20px]">
+  <div class = "flex justify-between items-center w-full px-[40px] h-[60px]">
+    <h1 class="text-[20px] font-inter font-bold text-[#393939]">Events</h1>
+
+    <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation"
+    class="text-[#393939] bg-[#F4F4F4] font-inter font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+    type="button">Filter based on region <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+    stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+  </div>
+</section>
+
+<div class="relative pl-[20px]">
+  <div class="flex w-full h-[360px] overflow-x-scroll">
+    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
+      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
+        style="background-image: url('{% static 'Poster1.png' %}');">
+      </div>
+      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
+        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
+          ROSSA 25 SHINING CONCERT</h1>
+        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
+        </button>
+      </div>
+    </div>
+    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
+      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
+        style="background-image: url('{% static 'Poster1.png' %}');">
+      </div>
+      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
+        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
+          ROSSA 25 SHINING CONCERT</h1>
+        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
+        </button>
+      </div>
+    </div>
+    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
+      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
+        style="background-image: url('{% static 'Poster1.png' %}');">
+      </div>
+      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
+        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
+          ROSSA 25 SHINING CONCERT</h1>
+        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
+        </button>
+      </div>
+    </div>
+    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
+      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
+        style="background-image: url('{% static 'Poster1.png' %}');">
+      </div>
+      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
+        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
+          ROSSA 25 SHINING CONCERT</h1>
+        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
+        </button>
+      </div>
+    </div>
+    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
+      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
+        style="background-image: url('{% static 'Poster1.png' %}');">
+      </div>
+      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
+        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
+          ROSSA 25 SHINING CONCERT</h1>
+        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %} 
