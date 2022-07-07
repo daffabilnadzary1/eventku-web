@@ -14,3 +14,7 @@ class eventDetail(View):
 class paymentSuccess(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'paymentSuccess.html')
+
+class login(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'login.html')
