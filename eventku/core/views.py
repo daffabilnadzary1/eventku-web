@@ -10,3 +10,7 @@ class Home(View):
 class eventDetail(View):
     def get(self, request,*args, **kwargs):
         return render(request, 'eventDetail.html')
+
+class paymentSuccess(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'paymentSuccess.html')
