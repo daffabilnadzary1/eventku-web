@@ -67,10 +67,12 @@
       </div>
       <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
         <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
-          {{event.title}}</h1>
-        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          {{event.title}}
+        </h1>
+        <a href="{% url 'core:event_detail' event_id=event.uuid %}"
+        class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
           <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
-        </button>
+        </a>
       </div>
     </div>
     {% endfor %}

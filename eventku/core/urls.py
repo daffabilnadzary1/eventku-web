@@ -5,6 +5,6 @@ app_name = 'core'
 
 urlpatterns = [
     path('', Home.as_view()),
-    path('detail/', eventDetail.as_view(), name = 'event_detail'),
+    path('detail/<str:event_id>/', eventDetail.as_view(), name = 'event_detail'),
     path('payment_success/', paymentSuccess.as_view(), name = 'payment_success'),
 ]

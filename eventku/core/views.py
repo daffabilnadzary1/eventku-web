@@ -15,9 +15,18 @@ class Home(View):
             'events':events
         })
 
+@method_decorator(login_required,name='dispatch')
 class eventDetail(View):
-    def get(self, request,*args, **kwargs):
-        return render(request, 'eventDetail.html')
+    def get(self, request, event_id, *args, **kwargs):
+        try:
+            event = Event.objects.get(uuid = event_id)
+            return render(request, 'eventDetail.html', {
+                'event': event
+            })
+        except Event.DoesNotExist:
+            return redirect('core:login')
+
+
 
 class paymentSuccess(View):
     def get(self, request, *args, **kwargs):
