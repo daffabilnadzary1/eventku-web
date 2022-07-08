@@ -28,16 +28,6 @@ class eventDetail(View):
         except Event.DoesNotExist:
             return redirect('core:login')
 
-# def translate_post(request):
-#     if request.method == 'POST':
-#         form = TranslatorInputForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             translation_result = translate(request.POST['text'], request.POST['source_language'], request.POST['target_language'])
-#             context['result'] = translation_result
-#             context['selected_source'] = request.POST['source_language']
-#             context['selected_target'] = request.POST['target_language']
-#         return redirect(reverse('index'))
-
 class paymentSuccess(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'paymentSuccess.html')
