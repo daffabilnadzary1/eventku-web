@@ -60,66 +60,22 @@
 
 <div class="relative pl-[20px]">
   <div class="flex w-full h-[360px] overflow-x-scroll">
+    {% for event in events %}
     <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
-      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
-        style="background-image: url('{% static 'Poster1.png' %}');">
+      <div class = "h-[240px] bg-blue-700 rounded-[20px] flex items-center">
+        <img src="{{event.event_pic.url}}" alt="" class="h-full object-cover">
       </div>
       <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
         <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
-          ROSSA 25 SHINING CONCERT</h1>
-        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
+          {{event.title}}
+        </h1>
+        <a href="{% url 'core:event_detail' event_id=event.uuid %}"
+        class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
           <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
-        </button>
+        </a>
       </div>
     </div>
-    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
-      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
-        style="background-image: url('{% static 'Poster1.png' %}');">
-      </div>
-      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
-        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
-          ROSSA 25 SHINING CONCERT</h1>
-        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
-          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
-        </button>
-      </div>
-    </div>
-    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
-      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
-        style="background-image: url('{% static 'Poster1.png' %}');">
-      </div>
-      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
-        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
-          ROSSA 25 SHINING CONCERT</h1>
-        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
-          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
-        </button>
-      </div>
-    </div>
-    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
-      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
-        style="background-image: url('{% static 'Poster1.png' %}');">
-      </div>
-      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
-        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
-          ROSSA 25 SHINING CONCERT</h1>
-        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
-          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
-        </button>
-      </div>
-    </div>
-    <div class="h-[320px] mr-[20px] bg-[#F4F4F4] rounded-[20px] aspect-7/6 drop-shadow-[0_10px_10px_rgba(0,0,0,0.20)]">
-      <div class = "h-[240px] bg-blue-700 rounded-[20px]"
-        style="background-image: url('{% static 'Poster1.png' %}');">
-      </div>
-      <div class="flex w-full rounded-[20px] bg-[#F4F4F4] h-[80px] p-[10px] justify-between items-center">
-        <h1 class="text-[16px] ml-[5px] font-inter font-semibold text-black max-w-[200px] h-[50px]">
-          ROSSA 25 SHINING CONCERT</h1>
-        <button class="h-auto w-[120px] ml-[10px] py-[5px] px-[20px] rounded-full bg-[#003CFF]">
-          <h1 class = "font-inter font-medium text-[16px] text-white">Get Ticket</h1>
-        </button>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock content %} 

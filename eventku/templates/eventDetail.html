@@ -26,23 +26,25 @@
 {% include 'partials/navbar.html' %}
 <div class="w-auto h-[400px] mx-[50px] mt-[20px] relative bg-[#F4F4F4] rounded-[20px]">
     <div class="flex w-full h-full">
-        <img src="{% static 'Poster1.png' %}" class="object-cover aspect-2/1 h-full rounded-[20px]" alt="">
+        <img src="{{event.event_pic.url}}" class="object-cover aspect-2/1 h-full rounded-[20px]" alt="">
         <div class="py-[40px] px-[30px] bg-[#F4F4F4] rounded-[20px]">
             <h1 class="h-[120px] font-inter font-bold text-[24px] leading-tight text-slate-800 overflow-y-auto">
-                ROSSA 25 SHINING YEARS CONCERT ROSSA 25 SHINING
+                {{event.title}}
             </h1>
             <div class = "flex mt-[10px] w-full h-auto items-center">
                 <img src="{% static 'icon_location.png' %}" alt="" class="h-[25px] aspect-square mr-[10px]">
-                <h1 class="font-inter text-[14px] font-medium w-full">Dyandra Convention Center Surabaya Dyandra Convention Center Surabaya</h1>
+                <h1 class="font-inter text-[14px] font-medium w-full">{{event.location}}</h1>
             </div>
             <div class = "flex mt-[10px] w-full h-auto items-center">
                 <img src="{% static 'icon_calendar.png' %}" alt="" class="h-[25px] aspect-square mr-[10px]">
                 <div class="w-full h-auto">
-                    <h1 class="font-inter text-[14px] font-medium w-full">Sabtu, 25 Juni 2022</h1>
-                    <h1 class="font-inter text-[14px] font-medium w-full">Pukul 17.00</h1>
+                    <h1 class="font-inter text-[14px] font-medium w-full">{{event.date}}</h1>
+                    <h1 class="font-inter text-[14px] font-medium w-full">{{event.time}}</h1>
                 </div>
             </div>
-            <div class="relative w-full h-auto mt-[10px]">
+            <form method='POST' action="payment_success/" class="relative w-full h-auto mt-[10px]">
+            {% comment %} <div class="relative w-full h-auto mt-[10px]"> {% endcomment %}
+                {% csrf_token %}
                 <input
                     type="search"
 
@@ -50,18 +52,18 @@
                     text-[#797979] bg-white bg-clip-padding border border-solid
                     border-[#A1A2A9] rounded-[10px] placeholder:text-[15px] placeholder:font-inter
                     placeholder:font-medium transition ease-in-out m-0 placeholder:text-[#797979]
-                    focus:text-gray-700 focus:bg-white focus:border-[#003CFF]
+                    focus:text-gray-700 focus:bg-white focus:border-[#003CFF] focus: font-inter
                     focus:outline-none"
-
-                    id="exampleSearch"
+                    name = "email"
+                    id="emailString"
                     placeholder="Insert your email here"
                 />
-                <div class="flex mt-[10px] justify-center">
+                <a href="#" class="flex mt-[10px] justify-center">
                     <button class = "bg-[#003CFF] h-auto text-[16px] text-white py-1 px-[20px] font-inter rounded-full">
                         Get Ticket
                     </button>
-                </div>
-            </div>
+                </a>
+            </form>
         </div>
     </div>
 </div>
@@ -69,25 +71,20 @@
 <div class="flex w-full mt-[30px] h-[600px] 0">
     <div class="ml-[50px] w-1/2 h-auto ">
         <h1 class="w-full h-auto font-inter font-base text-[14px]">
-            Inspire Production akan mengadakan konser offline di 4 kota besar di Indonesia
-            bertajuk “25 Shining Years Rossa”. Salah satunya di Kota Surabaya. Konser ini
-            untuk merayakan 25 tahun perjalanan karier Rossa di Industri Musik Indonesia.
-            Setelah menahan rindu selama dua tahun akibat pandemi, pada tahun 2022 ini
-            Rossa akan menyapamu secara langsung di Kota Surabaya. Yuk pesan sekarang juga
-            tiket konser Rossa di tiket.com!
+            {{event.description}}
         </h1>
         <h1 class="w-full h-auto font-inter font-bold text-[20px] mt-[30px]">
             Syarat & Ketentuan
         </h1>
         <h1 class="w-full h-auto font-inter font-base mt-[10px] text-[14px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ut corrupti saepe ipsam, cumque ullam eius consequatur explicabo similique in.
+            {{event.terms}}
         </h1>
     </div>
     <div class="w-1/2 mr-[50px] h-auto" >
         <div class="float-right mr-[50px] mt-[10px] h-auto w-auto ">
             <h1 class="font-bold font-inter text-[24px]">Show Venue</h1>
             <div class="rounded-[20px] overflow-hidden h-[300px] aspect-4/3 ">
-                <img src="{% static 'Poster1.png' %}" class = "object-cover h-[300px]" alt="">
+                <img src="{{event.venue_pic.url}}" class = "object-cover h-[300px]" alt="">
             </div>
         </div>
 

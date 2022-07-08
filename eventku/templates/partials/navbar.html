@@ -25,18 +25,36 @@
             text-gray-700 bg-transparent bg-clip-padding border border-solid
             border-[#A1A2A9] rounded-full placeholder:text-[15px] placeholder:font-inter
             transition ease-in-out m-0 placeholder:text-[#A1A2A9]
-            focus:text-gray-700 focus:bg-white focus:border-[#003CFF]
+            focus:text-gray-700 focus:bg-white focus:border-[#003CFF] focus: font-inter
             focus:outline-none"
 
             id="exampleSearch"
             placeholder="Search"
         />
         </div>
-        <button class = "bg-[#003CFF] text-[14px] text-white py-1 px-5 mx-3 font-inter rounded-full">
-        Sign Up
-        </button>
-        <button class = "bg-[#003CFF] text-[14px] text-white py-1 px-5 font-inter rounded-full">
-        Log In
+        {% if AUTH != 'false'  %}
+            {% if request.user.is_authenticated %}
+            <div>
+                <form action="{% url 'account_logout' %}" method="post" class = "flex h-auto w-auto">
+                    {% csrf_token %}
+                    <button class='bg-[#003CFF] text-[14px] text-white py-2 px-5 font-inter rounded-full'>
+                        Log Out
+                    </button>
+                    <button class='ml-[10px]'>
+                        <img src="{% static 'icon_user.png' %}" alt="" class="">
+                    </button>
+                </form>
+            </div>
+            {% else %}
+            <div>
+                <a href="{% url 'account_login' %}">
+                    <button class='bg-[#003CFF] text-[14px] text-white py-2 px-5 font-inter rounded-full'>
+                        Sign In 
+                    </button>
+                </a>
+            </div>
+            {% endif %}
+        {% endif %}
         </button>
     </div>
 </nav>

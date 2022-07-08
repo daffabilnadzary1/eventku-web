@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Payment Successful
+{% endblock title %}
+{% block others %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter']
+                    },
+                    aspectRatio: {
+                        '4/3': '4 / 3',
+                        '7/6': '7 / 6',
+                        '2/1': '2 / 1'
+                    },
+                }
+            }
+        }
+    </script>
+{% endblock others %}
+{% block content %}
+<div class="flex h-screen w-screen  items-center">
+    <div class="h-auto w-screen ">
+        <div class="items-center flex h-auto w-screen ">
+            <div class="ml-[80px] h-auto w-3/5 ">
+                <h1 class="font-bold font-inter text-[50px]">Payment Successful</h1>
+                <h1 class="mt-[10px] font-base font-inter text-[24px] w-full">Terima kasih.</h1>
+                <h1 class="font-base font-inter text-[24px] w-full">Silakan cek email anda untuk mendapatkan QR Code</h1>
+                <div class="w-auto h-auto float-left">
+                    <div class="flex justify-center">
+                        <img src="{% static 'timeline.png' %}" alt="" class="h-[30px] w-auto">
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="flex justify-center ">
+                            <h1 class="mr-[60px] font-inter font-bold text-[15px] text-center">Memilih event</h1>
+                            <h1 class="font-inter font-bold text-[15px] w-[120px] text-center">Memilih metode pembayaran</h1>
+                            <h1 class="ml-[60px] font-inter font-bold text-[15px] text-center">Pembayaran berhasil</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mr-[80px] h-auto w-2/5 ">
+                <img src="{% static 'paymentSuccess_splash.png' %}" alt="" class="">
+            </div>
+        </div>
+        <div class="justify-center flex w-auto h-auto">
+            <button class = "bg-[#003CFF] h-[60px] text-white py-1 px-[30px] mx-3 font-inter font-semibold text-[20px] tracking-wide rounded-full">
+                Back Home
+            </button>
+            
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock content %}

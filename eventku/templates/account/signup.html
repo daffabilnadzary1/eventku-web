@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Log In
+{% endblock title %}
+{% block others %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter']
+                    },
+                    aspectRatio: {
+                        '4/3': '4 / 3',
+                        '7/6': '7 / 6',
+                        '2/1': '2 / 1'
+                    },
+                }
+            }
+        }
+    </script>
+{% endblock others %}
+{% block content %}
+<div class="flex items-center w-screen h-screen ">
+    <div class="w-1/2 ">
+        <img src="{% static 'splashart_img.png' %}" alt="" class="w-full h-screen object-cover">
+    </div>
+    <form method = 'POST' class="h-auto w-1/2">
+        <div class="flex justify-center">
+            <h1 class="font-inter text-[50px] font-base">Sign Up</h1>
+        </div>
+        {% csrf_token %}
+        {% if form.errors %}
+        <div class="text-center text-slate-700 font-inter font-medium text-[16px]">
+            {{form.errors.email}}
+            {{form.errors.password1}}
+            {{form.errors.password2}}
+        </div>
+        {% endif %}
+        <div class="flex justify-center mx-[120px] ">
+            <input
+                class="mt-[60px] block w-full text-base font-normal py-[15px] pl-[20px]
+                text-[#797979] bg-white bg-clip-padding border border-solid
+                border-[#A1A2A9] rounded-[10px] placeholder:text-[20px] placeholder:font-inter
+                placeholder:font-base transition ease-in-out m-0 placeholder:text-[#A1A2A9]
+                focus:text-gray-700 focus:bg-white focus:border-[#003CFF] focus:text-[18px] focus: font-inter
+                focus:outline-none"
+
+                type="email"
+                name="email"
+                id="id_email"
+                placeholder="Username or Email"
+            />
+        </div>
+        <div class="flex justify-center mx-[120px] ">
+            <input
+                class="mt-[20px] block w-full text-base font-normal py-[15px] pl-[20px]
+                text-[#797979] bg-white bg-clip-padding border border-solid
+                border-[#A1A2A9] rounded-[10px] placeholder:text-[20px] placeholder:font-inter
+                placeholder:font-base transition ease-in-out m-0 placeholder:text-[#A1A2A9]
+                focus:text-gray-700 focus:bg-white focus:border-[#003CFF]
+                focus:outline-none"
+    
+                type="password"
+                name="password1"
+                id="id_password1"
+                placeholder="Password"
+            />
+        </div>
+        <div class="flex justify-center mx-[120px] ">
+            <input
+                class="mt-[20px] block w-full text-base font-normal py-[15px] pl-[20px]
+                text-[#797979] bg-white bg-clip-padding border border-solid
+                border-[#A1A2A9] rounded-[10px] placeholder:text-[20px] placeholder:font-inter
+                placeholder:font-base transition ease-in-out m-0 placeholder:text-[#A1A2A9]
+                focus:text-gray-700 focus:bg-white focus:border-[#003CFF]
+                focus:outline-none"
+    
+                type="password"
+                name="password2"
+                id="id_password2"
+                placeholder="Confirm Password"
+            />
+        </div>
+        {% if redirect_field_value %}
+            <input type = "hidden" name = "{{ redirect_field_value }}" value = "{{ redirect_field_value }}"/>
+        {% endif %}
+        <div class="flex justify-center mt-[60px] mx-[120px] ">
+            <button class = "bg-[#003CFF] h-[45px] text-white py-1 px-[50px] mx-3 font-inter font-medium text-[20px] tracking-wide rounded-full">
+                Sign Up
+            </button>
+        </div>
+        <div class="text-center mt-[10px]">
+            <p>
+                Already have an account? <a href="{% url 'account_login' %}"
+                class="text-blue-600 font-inter font-medium text-[14px]"> Sign Up</a>
+            </p>
+        </div>
+    </form>
+</div>
+{% endblock content%}
