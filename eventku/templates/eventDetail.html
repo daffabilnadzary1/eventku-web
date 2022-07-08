@@ -42,7 +42,8 @@
                     <h1 class="font-inter text-[14px] font-medium w-full">{{event.time}}</h1>
                 </div>
             </div>
-            <form method='POST' class="relative w-full h-auto mt-[10px]">
+            <form method='POST' action="payment_success/" class="relative w-full h-auto mt-[10px]">
+            {% comment %} <div class="relative w-full h-auto mt-[10px]"> {% endcomment %}
                 {% csrf_token %}
                 <input
                     type="search"
@@ -57,7 +58,7 @@
                     id="emailString"
                     placeholder="Insert your email here"
                 />
-                <a href="{% url 'core:payment_success' %}" class="flex mt-[10px] justify-center">
+                <a href="#" class="flex mt-[10px] justify-center">
                     <button class = "bg-[#003CFF] h-auto text-[16px] text-white py-1 px-[20px] font-inter rounded-full">
                         Get Ticket
                     </button>

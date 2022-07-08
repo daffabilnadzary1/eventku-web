@@ -3,8 +3,8 @@ from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Event
-from .mailapp.app import send_group_invitation
 from .forms import emailForm
+from .flask_mail import generate_mail
 
 # Create your views here.
 
@@ -28,23 +28,26 @@ class eventDetail(View):
         except Event.DoesNotExist:
             return redirect('core:login')
 
-    def post(self, request, event_id, *args, **kwargs):
-        event = Event.objects.get(uuid = event_id)
-        if request.method == "POST":
-          # Get the posted form
-            email_form = emailForm(request.POST)
-            
-            if email_form.is_valid():
-                # do anything here
-                email = email_form.cleaned_data['email']
-                print(email)
-                send_group_invitation()
-                return render(request, 'eventDetail.html', {
-                    'event': event
-                })
+# def translate_post(request):
+#     if request.method == 'POST':
+#         form = TranslatorInputForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             translation_result = translate(request.POST['text'], request.POST['source_language'], request.POST['target_language'])
+#             context['result'] = translation_result
+#             context['selected_source'] = request.POST['source_language']
+#             context['selected_target'] = request.POST['target_language']
+#         return redirect(reverse('index'))
 
 class paymentSuccess(View):
     def get(self, request, *args, **kwargs):
+        return render(request, 'paymentSuccess.html')
+
+    def post(self, request, *args, **kwargs):
+        email_form = emailForm(request.POST)
+        if email_form.is_valid():
+            email = email_form.cleaned_data['email']
+            print(email)
+            generate_mail(email)
         return render(request, 'paymentSuccess.html')
 
 class login(View):
